@@ -1,0 +1,13 @@
+<!-- <h1>Users#new</h1>
+<p>Find me in app/views/users/new.html.erb</p> -->
+
+<h1>Registre-se aqui</h1>
+
+<%= simple_form_for(@user) do |f| %>
+   <%= f.input :name %>
+   <%= f.input :github %>
+   <%= f.input :job %>
+   <%= f.input :relationship, as: :boolean, inline_label: true, label: "In a relationship?" %>
+   <%= f.submit "Subimit", class: "btn btn-primary" %>
+<% end %>
+

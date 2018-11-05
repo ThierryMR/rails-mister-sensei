@@ -1,0 +1,30 @@
+
+
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+
+<p><strong>Falta colocar todos os posts que este usuario fez</strong> </p>
+
+ <p> Name: <%= @user.name  %></p>
+<p> Github:<%= @user.github  %></p>
+<p>Job: <%= @user.job  %></p>
+ <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{@user.github}", class: "img-circle" %>
+<% if @user.relationship == false  %>
+  <h2>status: Single</h2>
+<% else  %>
+  <h2>status: Dating</h2>
+<% end %>
+  <p>Qualquer merda</p>
+
+  <% if @user.github == "ThierryMR"  %>
+  <li> Sem posts por enquanto </li>
+  <% else %>
+  <li><%= @posts %> </li>
+  <li> <%= @user.posts  %> </li>
+  <% end %>
+  <!-- Colocar os posts do user na page -->
+  <li> Posts do user: </li>
+  <%= link_to "Post ja =)", new_post_path ,class: "btn btn-primary"  %>
+
+
+

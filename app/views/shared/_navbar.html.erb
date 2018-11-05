@@ -1,0 +1,25 @@
+<nav class="navbar navbar-light bg-light">
+
+  <h3>
+      <%= link_to new_user_path do  %>
+      <i class="fas fa-user-plus navbar-brand"></i>
+      <% end %>
+      </h3>
+  <div class="col-xs-1 text-center">
+    <form class="form-inline">
+     <div style="padding-left: 10px;">
+       <%= link_to "Home page", users_path, class: "btn btn-primary"  %>
+        <%= link_to "Create a new user", new_user_path, class: "btn btn-outline-success"   %>
+        <%= link_to "Create a new post", new_post_path, class: "btn btn-primary"   %>
+        <%= link_to "See Wagoners Posts", posts_path, class: "btn btn-outline-success" %>
+
+      <!--   <a class="btn btn-outline-success" href="/signup" role="button">
+        Sign Up -->
+        <!-- </a> -->
+
+    </div>
+    </div>
+  </form>
+</nav>
+  <!-- Dropdown appearing on mobile only -->
+</div>

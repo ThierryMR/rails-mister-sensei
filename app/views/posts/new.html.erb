@@ -1,0 +1,19 @@
+<!-- <h1>Posts#new</h1>
+<p>Find me in app/views/posts/new.html.erb</p> -->
+
+<h1>Crie seu post</h1>
+
+<!-- <p><strong>Ao fazer o submit tambem nao vai para o path certo</strong> </p> -->
+
+<div class="container">
+  <div class="card">
+  <h2><%= simple_form_for(@post) do |f| %>
+    <%= f.input :content %>
+
+    <%=f.association :user  %>
+    <%= f.submit "Submit", class: "btn btn-primary" %></h2>
+
+    <% end %>
+  </div>
+
+</div>

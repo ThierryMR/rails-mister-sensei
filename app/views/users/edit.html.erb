@@ -1,0 +1,12 @@
+<h1>Users#edit</h1>
+<p>Find me in app/views/users/edit.html.erb</p>
+
+<h3>Here you can edit the information about the user, go ahead</h3>
+
+<%= simple_form_for(@user) do |f| %>
+   <%= f.input :name %>
+   <%= f.input :github %>
+   <%= f.input :job %>
+   <%= f.input :relationship, as: :boolean, inline_label: true, label: "In a relationship?" %>
+   <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>

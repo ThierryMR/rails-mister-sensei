@@ -1,0 +1,44 @@
+
+
+
+<!--
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html.erb</p> -->
+<h1>Minha Primeira Rede Social =)</h1>
+<!-- <p><strong>Ao deletar a pagina esta sendo direcionada para um lugar paia</strong> </p> -->
+
+<!-- Resolvi esse problema olhando os path direitinho -->
+<!-- <p> <strong>O Edit nao esta editando de maneira apropriada...</strong></p> -->
+
+<div class="col-xs-1 text-center">
+  <h1>Home Page</h1>
+  <h3>Users : <%= @users.count  %>  </h3>
+
+
+
+
+<% @users.each do |u| %>
+ <div class="col-xs-1 text-center">
+    <div class="card">
+      <%= link_to u do  %>
+      <h2> <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{u.github}", class: "img-circle" %>
+      <%= u.name %>
+      <%= link_to 'Delete' , user_path(u), :class => "btn btn-primary",
+      method: :delete,
+      data: { confirm: "Are you sure?"}  %>
+      <%= link_to "edit", edit_user_path(u),
+          :class => "btn btn-primary",
+          method: :edit,
+          data: {confirm: "Edit the things?"}  %></h2>
+    </div>
+  </div>
+  <!-- Ta faltando uma / para ir pro path certo -->
+  <% end %>
+
+</div>
+
+<% end %>
+
+
+
+
